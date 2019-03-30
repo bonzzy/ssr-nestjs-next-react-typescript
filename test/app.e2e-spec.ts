@@ -1,9 +1,9 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import * as request from 'supertest';
-import {AppModule} from '@server/modules/AppModule';
+import request from 'supertest';
+import {AppModule} from '@server/AppModule';
 import {INestApplication} from '@nestjs/common';
 
-describe('AppController (e2e)', () => {
+describe('HomeController (e2e)', () => {
   let app: INestApplication;
 
   beforeEach(async () => {
@@ -15,9 +15,9 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
-  it('/ (GET)', () => {
+  it('/home/hello (GET)', () => {
     return request(app.getHttpServer())
-      .get('/components')
+      .get('/home/hello')
       .expect(200)
       .expect('Hello World!');
   });

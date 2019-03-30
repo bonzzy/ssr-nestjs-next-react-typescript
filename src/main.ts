@@ -3,7 +3,7 @@ import { NestFactory } from '@nestjs/core';
 import { RenderModule } from 'nest-next';
 import Next from 'next';
 import {FastifyAdapter, NestFastifyApplication} from '@nestjs/platform-fastify';
-import {AppModule} from '@server/modules/AppModule';
+import {AppModule} from '@server/AppModule';
 
 async function bootstrap() {
   const dev = process.env.NODE_ENV !== 'production';
